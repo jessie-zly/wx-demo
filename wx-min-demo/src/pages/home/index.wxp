@@ -1,0 +1,131 @@
+<template>
+<view>
+  <!-- MinUI 组件使用 -->
+  <!-- avatar 头像 -->
+  <wxc-avatar class="avatar avatar__1" count="7" src="https://s11.mogucdn.com/p2/170413/upload_86dkh4e886991g9lji7a6g5c530ji_400x400.jpg"></wxc-avatar>
+  <wxc-avatar class="avatar avatar__2" src="https://s10.mogucdn.com/mlcdn/c45406/171116_3a30h33df8cj7f651al68hdh7bki7_528x528.png"></wxc-avatar>
+  <wxc-avatar class="avatar avatar__3" src="https://s10.mogucdn.com/mlcdn/c45406/171116_62f571l0ki0ffcg94h6kg6452h497_356x356.png"></wxc-avatar>
+
+  <!-- 自定义点击方法 -->
+  <view class="index-bd" bind:tap='onClick'>Hello World</view>
+
+  <!-- 徽章 -->
+  <view class="user">
+    <image class="user__avatar" src="https://s10.mogucdn.com/mlcdn/c45406/171019_20e8ac6bcjb67f9i8b88j2aiiil03_200x200.jpg"></image>
+    <wxc-badge class="user__un-read-msg-count" max="99" value="230"></wxc-badge>
+  </view>
+
+  <!-- 页面跳转 -->
+  <navigator class="index-bd" url='/pages/test/test'>跳转至测试页</navigator>
+
+  <view class="index-ft">
+    <view class="provider">Created by Min</view>
+  </view>
+</view>
+</template>
+
+<script>
+export default {
+  config: {
+    usingComponents: {
+      'wxc-avatar': '@minui/wxc-avatar',
+      'wxc-badge': '@minui/wxc-badge',
+    },
+  },
+  data: {},
+  onLoad() {
+    console.log('page -> this', this);
+  },
+  onUnload() {},
+  onReady() {},
+  onShow() {},
+  onHide() {},
+  options() {},
+  onRouteEnd() {
+    console.log('page -> route', this.route);
+  },
+  // 自定义方法
+  onClick() {
+    console.log('page -> route', this.route);
+  },
+}
+</script>
+
+<style>
+.index-hd {
+  padding: 70rpx;
+  text-align: center;
+}
+
+.index-bd {
+  padding: 20rpx 30rpx;
+  background-color: cadetblue;
+  color: #fff;
+  text-align: center;
+}
+
+.index-ft {
+  padding-bottom: 20rpx;
+  text-align: center;
+}
+
+.index-logo {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.index-desc {
+  margin-top: 20rpx;
+  color: #888888;
+  font-size: 28rpx;
+}
+
+.provider {
+  position: fixed;
+  width: 100%;
+  bottom: 120rpx;
+  color: #a9a9a9;
+  text-align: center;
+}
+
+/* customer style */
+
+.avatar {
+  display: inline-block;
+  margin-right: 20rpx;
+}
+
+.avatar__1 {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.avatar__2 {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.avatar__3 {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.user {
+  width: 100rpx;
+  height: 100rpx;
+  position: relative;
+}
+
+.user__avatar {
+  display: block;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.user__un-read-msg-count {
+  position: absolute;
+  top: -16rpx;
+  right: -18rpx;
+}
+</style>

@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+# folders
+.idea/
+wx-min-demo/dist/
+wx-min-demo/node_modules/
+
+# files

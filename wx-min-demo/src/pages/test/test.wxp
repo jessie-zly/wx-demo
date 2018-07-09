@@ -1,0 +1,25 @@
+<template>
+  <view>Test Page</view>
+</template>
+
+<script>
+export default {
+  config: {
+    navigationBarTitleText: '测试',
+    usingComponents: {}
+  },
+  data: {},
+  onLoad() {
+    console.log('page -> this', this);
+  },
+  onUnload() {},
+  onReady() {},
+  onShow() {},
+  onHide() {},
+  options() {},
+  onRouteEnd() {}
+}
+</script>
+
+<style>
+</style>
